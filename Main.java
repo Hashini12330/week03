@@ -52,8 +52,13 @@ public class Main{
         // 02 
         override ov = new override();
         ov.sound();
+        System.out.println();
 
 
+        // 03
+        Dog1 pr = new Dog1();
+        pr.setName("Doggy");
+        pr.show();
 
 
 
@@ -195,3 +200,31 @@ class override extends Animal{
     }
     
 }
+
+
+// 03
+// Inheritance and private Fields
+
+class Animal1{
+    private String name;
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+}
+
+class Dog1 extends Animal1{
+
+    void show(){
+        // System.out.println(name); // wrong
+        System.out.println(getName());  // correct  // A child class cannot directly access a parent's private
+    }
+
+}
+
+
