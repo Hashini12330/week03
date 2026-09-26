@@ -29,12 +29,37 @@ public class Main{
         // write only field -- here not getter method and cannot take output
         Monster3 mons3 = new Monster3();
         mons3.setName("Tom");
+        System.out.println();
 
 
         // two class
         Warrior w = new Warrior();
         Monster4 m = new Monster4();
         m.steal(w);
+        System.out.println();
+
+
+        // inheritance
+        // 01
+        Dog d = new Dog();
+        d.name = "Tom";
+        d.age = 20; 
+        d.eat();    // inheritance method    
+        d.showdetails();   // dogs own method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
@@ -128,4 +153,26 @@ class Monster4{
     }
 }
 
+
+// inheritance
+// 01
+class Animal{
+    String name;
+
+    void eat(){ // Here, no access modifier is written. This means the method has default (package-private) access.
+        System.out.println(name + " is eating");
+    }
+
+
+}
+
+class Dog extends Animal{
+    int age;
+
+    void showdetails(){
+        System.out.println(name + " is barking");
+        System.out.println(age + " years old");
+    }
+
+}
 
