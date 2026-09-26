@@ -9,6 +9,20 @@ public class Main{
 
         System.out.println(mons.getName()); // System.out.println(m1.age); not use like this
         System.out.println(mons.getAge());
+        System.out.println();
+
+
+        // encapsulation with validation
+        Monster1 mons1 = new Monster1();
+        mons1.setAge(25);
+        System.out.println(mons1.getAge());
+
+        mons1.setAge(-5);
+        System.out.println(mons1.getAge());
+
+        
+        
+
 
 
 
@@ -44,6 +58,22 @@ class Monster{
 }
 
 
+// encapsulation with validation
+class Monster1{
+    private int age;
 
+    public void setAge(int age){
+        if(age >= 1){
+            this.age = age;
+        }else{
+            System.out.println("Invalid age");
+        }
+    }
+
+
+    public int getAge(){
+        return age;
+    }
+}
 
 
