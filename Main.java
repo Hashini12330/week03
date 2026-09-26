@@ -59,10 +59,12 @@ public class Main{
         Dog1 pr = new Dog1();
         pr.setName("Doggy");
         pr.show();
+        System.out.println();
 
 
-
-
+        // 04
+        Dog2 d2 = new Dog2("Jerry", 25);
+        d2.show();
 
 
 
@@ -228,3 +230,30 @@ class Dog1 extends Animal1{
 }
 
 
+
+// 04
+// protected inheritance
+class Animal2{
+    protected String name;
+
+    public Animal2(String name){
+        this.name = name;
+    }
+
+}
+
+class Dog2 extends Animal2{
+        private int age;
+
+        public Dog2(String name, int age){
+            super(name);
+            this.age = age;
+
+        }
+
+        public void show(){
+            System.out.println("Name: " + name);
+            System.out.println("Age: " + age);
+        }
+
+}
