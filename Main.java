@@ -21,11 +21,14 @@ public class Main{
         System.out.println(mons1.getAge());
 
         
-        // rwad only field
+        // read only field
         Monster2 mons2 = new Monster2();
         System.out.println(mons2.getAge());
         
 
+        // write only field -- here not getter method and cannot take output
+        Monster3 mons3 = new Monster3();
+        mons3.setName("Tom");
 
 
 
@@ -90,4 +93,15 @@ class Monster2{
         return age;
     }
 
+}
+
+
+// write only field
+class Monster3{
+    private String name;
+
+    public void setName(String name){
+        this.name = name;
+
+    }
 }
