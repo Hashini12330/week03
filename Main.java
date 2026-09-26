@@ -21,6 +21,9 @@ public class Main{
         System.out.println(mons1.getAge());
 
         
+        // rwad only field
+        Monster2 mons2 = new Monster2();
+        System.out.println(mons2.getAge());
         
 
 
@@ -77,3 +80,14 @@ class Monster1{
 }
 
 
+
+// read only field
+// But cannot change it using a setter because there is no setter.
+class Monster2{
+    private int age = 50;
+
+    public int getAge(){    
+        return age;
+    }
+
+}
