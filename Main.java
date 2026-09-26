@@ -31,6 +31,11 @@ public class Main{
         mons3.setName("Tom");
 
 
+        // two class
+        Warrior w = new Warrior();
+        Monster4 m = new Monster4();
+        m.steal(w);
+
 
     }
 }
@@ -105,3 +110,22 @@ class Monster3{
 
     }
 }
+
+
+// two class
+class Warrior{
+
+    public void lose_stick(){
+        System.out.println("Warrior lost the stick");
+    }
+
+}
+
+class Monster4{
+    public void steal(Warrior warrior){
+        warrior.lose_stick();
+
+    }
+}
+
+
