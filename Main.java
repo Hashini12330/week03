@@ -46,9 +46,12 @@ public class Main{
         d.age = 20; 
         d.eat();    // inheritance method    
         d.showdetails();   // dogs own method
+        System.out.println();
 
 
-
+        // 02 
+        override ov = new override();
+        ov.sound();
 
 
 
@@ -163,6 +166,9 @@ class Animal{
         System.out.println(name + " is eating");
     }
 
+    void sound(){
+        System.out.println("Aimal make a sound");
+    }
 
 }
 
@@ -176,3 +182,16 @@ class Dog extends Animal{
 
 }
 
+
+
+// 02
+// override method in inheritance
+class override extends Animal{
+    
+    @Override 
+    void sound(){
+        System.out.println("Dog barks");
+        super.sound();  // without super only show child sound
+    }
+    
+}
